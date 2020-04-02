@@ -50,7 +50,8 @@ console.log(playerInfo.name, playerInfo.attack, playerInfo.health);
         var value = Math.floor(Math.random() * (max - min + 1) + min);
   
         return value;
-    };
+        };
+
 
 var enemyInfo = [
     {
@@ -95,6 +96,7 @@ var enemyInfo = [
     }
     return false;
   };
+
 
   var fight = function(enemy) {
     // keep track of who goes first
@@ -171,6 +173,7 @@ var enemyInfo = [
     }
   };
 
+
     var startGame = function() {
             // reset player stats
             playerInfo.reset();
@@ -231,6 +234,7 @@ var enemyInfo = [
         }
       };
 
+
       var shop = function() {
         // ask player what they'd like to do
         var shopOptionPrompt = window.prompt(
@@ -255,12 +259,6 @@ var enemyInfo = [
         }
       };
 
-      // function to generate a random numeric value
-        var randomNumber = function(min, max) {
-            var value = Math.floor(Math.random() * (max - min + 1) + min);
-      
-            return value;
-        };
 
 // start the game when the page loads
 startGame();
