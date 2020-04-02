@@ -1,4 +1,4 @@
-// function to set name
+
 var getPlayerName = function() {
     var name = "";
   
@@ -8,7 +8,8 @@ var getPlayerName = function() {
   
     console.log("Your robot's name is " + name);
     return name;
-  };
+    };
+
 
 var playerInfo = {
     name: getPlayerName(),
@@ -40,17 +41,16 @@ var playerInfo = {
           window.alert("You don't have enough money!");
         }
       }
-  };
+    };
 
-// You can also log multiple values at once like this
-console.log(playerInfo.name, playerInfo.attack, playerInfo.health);
 
-      // function to generate a random numeric value
-      var randomNumber = function(min, max) {
-        var value = Math.floor(Math.random() * (max - min + 1) + min);
-  
-        return value;
-        };
+    console.log(playerInfo.name, playerInfo.attack, playerInfo.health);
+
+
+var randomNumber = function(min, max) {
+    var value = Math.floor(Math.random() * (max - min + 1) + min);
+    return value;
+    };
 
 
 var enemyInfo = [
@@ -66,9 +66,9 @@ var enemyInfo = [
       name: "Robo Trumble",
       attack: randomNumber(10, 14)
     }
-  ];
+    ];
 
-  var fightOrSkip = function() {
+var fightOrSkip = function() {
     // ask user if they'd like to fight or skip using  function
     var promptFight = window.prompt('Would you like FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
   
@@ -95,10 +95,10 @@ var enemyInfo = [
       }
     }
     return false;
-  };
+    };
 
 
-  var fight = function(enemy) {
+var fight = function(enemy) {
     // keep track of who goes first
     var isPlayerTurn = true;
   ​
@@ -171,12 +171,12 @@ var enemyInfo = [
       // switch turn order for next round
       isPlayerTurn = !isPlayerTurn;
     }
-  };
+    };
 
 
-    var startGame = function() {
+var startGame = function() {
             // reset player stats
-            playerInfo.reset();
+        playerInfo.reset();
 
         for(var i = 0; i < enemyInfo.length; i++) {
             if (playerInfo.health > 0) {
@@ -198,13 +198,13 @@ var enemyInfo = [
             else {
                 window.alert("You have lost your robot in battle! Game Over!");
             break;
-            }
+                }
         }   
         endGame();
     };
 
     // function to end the entire game
-    var endGame = function() {
+var endGame = function() {
         window.alert("The game has now ended. Let's see how you did!");
       
         // check localStorage for high score, if it's not there, use 0
@@ -232,10 +232,10 @@ var enemyInfo = [
         else {
           window.alert("Thank you for playing Battlebots! Come back soon!");
         }
-      };
+    };
 
 
-      var shop = function() {
+var shop = function() {
         // ask player what they'd like to do
         var shopOptionPrompt = window.prompt(
             "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one 1 for REFILL, 2 for UPGRADE, or 3 for LEAVE."
@@ -257,7 +257,7 @@ var enemyInfo = [
             shop();
             break;
         }
-      };
+    };
 
 
 // start the game when the page loads
