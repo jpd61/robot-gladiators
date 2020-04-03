@@ -18,7 +18,7 @@ var playerInfo = {
       this.health = 100;
       this.money = 10;
       this.attack = 10;
-    }, // comma!
+    },
     refillHealth: function() {
         if (this.money >= 7) {
           window.alert("Refilling player's health by 20 for 7 dollars.");
@@ -41,9 +41,7 @@ var playerInfo = {
       }
     };
 
-
 console.log(playerInfo.name, playerInfo.attack, playerInfo.health);
-
 
 var randomNumber = function(min, max) {
     var value = Math.floor(Math.random() * (max - min + 1) + min);
@@ -125,12 +123,10 @@ var fightOrSkip = function() {
 var fight = function(enemy) {
     // keep track of who goes first
     var isPlayerTurn = true;
-  ​
-    // randomly change turn order
+
     if (Math.random() > 0.5) {
       isPlayerTurn = false;
     }
-  ​
     while (playerInfo.health > 0 && enemy.health > 0) {
       if (isPlayerTurn) {
         // ask user if they'd like to fight or skip using fightOrSkip function
@@ -138,9 +134,9 @@ var fight = function(enemy) {
           // if true, leave fight by breaking loop
           break;
         }
-  ​
+
         var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
-  ​
+        
         // remove enemy's health by subtracting the amount we set in the damage variable
         enemy.health = Math.max(0, enemy.health - damage);
         console.log(
