@@ -1,11 +1,9 @@
 
 var getPlayerName = function() {
     var name = "";
-  
     while (name === "" || name === null) {
         name = prompt("What is your robot's name?");
         }
-  
     console.log("Your robot's name is " + name);
     return name;
     };
@@ -155,7 +153,6 @@ var fight = function(enemy) {
             enemy.health +
             " health remaining."
         );
-  ​
         // check enemy's health
         if (enemy.health <= 0) {
           window.alert(enemy.name + " has died!");
@@ -181,7 +178,6 @@ var fight = function(enemy) {
             playerInfo.health +
             " health remaining."
         );
-  ​
         // check player's health
         if (playerInfo.health <= 0) {
           window.alert(playerInfo.name + " has died!");
@@ -200,7 +196,6 @@ var fight = function(enemy) {
 var startGame = function() {
             // reset player stats
         playerInfo.reset();
-
         for(var i = 0; i < enemyInfo.length; i++) {
             if (playerInfo.health > 0) {
                 window.alert("Welcome to Robot Gladiators! Round " + ( i + 1 ) );
