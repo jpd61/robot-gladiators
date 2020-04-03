@@ -92,7 +92,7 @@ var shop = function() {
             break;
         }
     };
-    
+
 
 var fightOrSkip = function() {
     // ask user if they'd like to fight or skip using  function
@@ -116,8 +116,8 @@ var fightOrSkip = function() {
         window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
         // subtract money from playerMoney for skipping
         playerInfo.money = Math.max(0, playerInfo.money - 10);
-        return true;
         shop();
+        return true;
       }
     }
     return false;
@@ -159,10 +159,8 @@ var fight = function(enemy) {
         // check enemy's health
         if (enemy.health <= 0) {
           window.alert(enemy.name + " has died!");
-  ​
           // award player money for winning
           playerInfo.money = playerInfo.money + 20;
-  ​
           // leave while() loop since enemy is dead
           break;
         } else {
@@ -171,7 +169,6 @@ var fight = function(enemy) {
         // player gets attacked first
       } else {
         var damage = randomNumber(enemy.attack - 3, enemy.attack);
-  ​
         // remove enemy's health by subtracting the amount we set in the damage variable
         playerInfo.health = Math.max(0, playerInfo.health - damage);
         console.log(
